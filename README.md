@@ -61,7 +61,6 @@ These datasets will be merged by `Country` and `Year` to allow direct comparison
 
 ## 5. Tools
 - Python
-- Jupyter Notebook
 
 ## 6. Privacy & Ethics
 All data used in this project is publicly available and aggregated at the country level. No personal or sensitive information is included. Data sources allow open use for research and educational purposes.
