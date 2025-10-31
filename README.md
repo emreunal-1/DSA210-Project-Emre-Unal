@@ -1,67 +1,74 @@
-# DSA210 Project Proposal: Global Happiness Analysis - Emre Ünal 31142
+# DSA210 Project Phase1 Emre Ünal: Global Happiness & Life Expectancy Analysis
 
 ## 1. Objective
-The purpose of this project is to analyze the factors influencing happiness across countries using the **World Happiness Report** dataset. The dataset ranks countries based on their citizens' perceived well-being, along with economic and social indicators.  
-The project will explore which variables correlate most strongly with happiness and how these relationships vary by region.
+The goal of this project is to analyze global happiness scores and investigate how they relate to life expectancy across countries and over time. By combining the World Happiness Report with publicly available life expectancy data, the study aims to identify patterns, trends, and potential correlations between overall well-being and average lifespan.
 
-Example guiding questions:
-- Which factors best predict a country's happiness score?
-- Are richer countries always happier?
-- How do happiness scores differ across continents or income groups?
+Key questions include:
+- Do happier countries tend to have higher life expectancy?
+- How does life expectancy vary among countries with different happiness scores?
+- Have improvements in life expectancy aligned with increases in happiness over time?
 
 ## 2. Data Sources
-### 2.1 Base Dataset: World Happiness Report
-The data is publicly available from [https://worldhappiness.report/](https://worldhappiness.report/).  
-The dataset includes variables such as:
-- `Country`  
-- `Year`  
-- `Happiness Score` (or `Ladder Score`)  
-- `GDP per capita`  
-- `Social support`  
-- `Healthy life expectancy`  
-- `Freedom to make life choices`  
-- `Generosity`  
-- `Perceptions of corruption`
 
-### 2.2 Enrichment Dataset: World Bank Indicators
-To enrich the dataset, I will merge it with selected socio-economic indicators from the **World Bank Open Data** (https://data.worldbank.org/), such as:
-- Inflation rate  
-- Unemployment rate  
-- CO₂ emissions per capita  
+### 2.1 Primary Dataset: World Happiness Report
+Source: [https://worldhappiness.report/ ](https://www.worldhappiness.report) 
+The dataset includes annual happiness scores and indicators such as:
+- Country
+- Year
+- Happiness score 
+- GDP per capita
+- Social support
+- Healthy life expectancy 
+- Freedom to make life choices
+- Generosity
+- Perceptions of corruption
 
-These will be used to examine additional relationships between economic/environmental factors and happiness.
+### 2.2 Enhancement Dataset: Life Expectancy Data
+Source: Our World in Data — Life Expectancy  
+[https://ourworldindata.org/life-expectancy  ](https://ourworldindata.org/life-expectancy)
+Direct CSV: https://ourworldindata.org/grapher/life-expectancy.csv
+
+This dataset provides:
+- Country
+- Year
+- Life expectancy at birth
+
+These datasets will be merged by `Country` and `Year` to allow direct comparison, relation and correlation.
 
 ## 3. Planned Analysis
-1. **Correlation Analysis**  
-   - Identify which factors correlate most strongly with happiness scores.  
-2. **Regional Comparison**  
-   - Compare average happiness levels across continents.  
-3. **Economic Impact Study**  
-   - Analyze whether GDP per capita has diminishing returns on happiness.  
-4. **Temporal Trends**  
-   - Observe how global happiness and inequality have shifted over the years.  
-5. **Environmental Extension (Enrichment)**  
-   - Test whether pollution (CO₂ emissions) or inflation relates to happiness differences.
+1. **Correlation Analysis**
+   - Relationship between happiness scores and life expectancy across countries.
+
+2. **Global and Regional Trends**
+   - Compare continents or income groups to identify regional differences.
+
+3. **Temporal Analysis**
+   - Examine how changes in life expectancy relate to happiness trends over the years or vice versa.
+
+4. **Visualization**
+   - Scatter plots
+   - Correlation heatmaps
+   - Regional comparison charts
+   - Time-series line plots
 
 ## 4. Data Collection Plan
-1. Download the World Happiness Report dataset (available as CSV for multiple years).  
-2. Download relevant World Bank indicators (via CSV or API).  
-3. Clean and merge datasets on country and year.  
-4. Perform exploratory data analysis using Python (pandas, matplotlib, seaborn).  
-5. Produce descriptive statistics and correlation visualizations.
+1. Download the World Happiness Report dataset as CSV.
+2. Download the OWID life expectancy dataset as CSV.
+3. Clean datasets (standardize country names, handle missing years).
+4. Merge datasets on `Country` and `Year`.
+5. Perform exploratory data analysis in Python (pandas, matplotlib, seaborn).
+6. Create visualizations and summary statistics.
 
-## 5. Privacy / Ethics
-The data is entirely public and aggregated at the country level. It contains no personal or sensitive information.  
-Both the World Happiness Report and World Bank datasets are openly licensed for educational and research use.
+## 5. Tools
+- Python
+- Jupyter Notebook
 
-## 6. Tools
-- Python (pandas, matplotlib, seaborn)  
-- Jupyter Notebook for analysis  
-- GitHub for version control and project submission  
+## 6. Privacy & Ethics
+All data used in this project is publicly available and aggregated at the country level. No personal or sensitive information is included. Data sources allow open use for research and educational purposes.
 
 ## 7. Expected Outcome
-The final report will present insights on global well-being patterns and the strongest predictors of happiness.  
-Key deliverables include:
-- Visualizations showing regional and temporal trends.  
-- Correlation matrices and regression plots identifying key drivers of happiness.  
-- A concise summary discussing how wealth, health, and freedom interact to shape global happiness.
+The final results are expected to:
+- Demonstrate statistical relationships between happiness and life expectancy.
+- Provide visual insights into global well-being dynamics.
+- Highlight regional patterns and outliers.
+- Offer a concise, data-driven interpretation of the connection between lifespan and perceived quality of life.
